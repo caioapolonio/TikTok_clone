@@ -5,6 +5,7 @@ import {Search} from '../pages/search'
 import {Inbox} from '../pages/inbox'
 import {New} from '../pages/new'
 import {Profile} from '../pages/profile'
+import {ButtonNew} from '../components/ButtonNew'
 
 const Tab = createBottomTabNavigator()
 
@@ -51,6 +52,11 @@ export function Routes() {
             <Tab.Screen
             name='New'
             component={New}
+            options={{
+                tabBarIcon: ({ size }) => {
+                    return <ButtonNew size={size}/>
+                }
+            }}
             />
             <Tab.Screen
             name='Inbox'
